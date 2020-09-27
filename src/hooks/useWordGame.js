@@ -14,11 +14,11 @@ function useWordGame() {
         setText(value)
     }
     
-    function calculateWordCount(text) {
-        const wordsArr = text.trim().split(" ")
-        return wordsArr.filter(word => word !== "").length
-    }
-    
+	function calculateWordCount(text) {
+		const wordsArr = text.trim().split(" ")
+		return wordsArr.filter(word => word !== "").length
+	}
+	
     function startGame() {
         setIsTimeRunning(true)
         setTimeRemaining(STARTING_TIME)
@@ -27,19 +27,20 @@ function useWordGame() {
         textBoxRef.current.focus()
     }
     
-    function endGame() {
-        setIsTimeRunning(false)
-        setWordCount(calculateWordCount(text))
-    }
-    
+	function endGame() {
+		setIsTimeRunning(false)
+		setWordCount(calculateWordCount(text))
+	}
+	
     useEffect(() => {
-        if(isTimeRunning && timeRemaining > 0) {
+	    if(isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
             }, 1000)
         } else if(timeRemaining === 0) {
             endGame()
         }
+		// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [timeRemaining, isTimeRunning]);
     
     return {textBoxRef, handleChange, text, isTimeRunning, timeRemaining, startGame, wordCount}    
