@@ -5,12 +5,10 @@ $ yarn # npm install
 $ yarn build # npm run build
 ````
 
-## Development
 
-Run Webpack in watch-mode to continually compile the JavaScript as you work:
+Live Project Link: 
 
-```
-$ yarn watch # npm run watch
-```
+https://speed-typing-game-rishab.netlify.app/
+
 
 Happy Coding!
