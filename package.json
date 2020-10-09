@@ -1,6 +1,8 @@
 {
   "name": "Speed-Typing-Game-app",
   "dependencies": {
+    "airtable": "^0.10.0",
+    "dotenv": "^8.2.0",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "react-scripts": "3.4.1"
